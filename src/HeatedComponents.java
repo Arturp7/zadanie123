@@ -2,6 +2,7 @@ abstract public class HeatedComponents extends ComputerComponent implements Boos
     private int clock;
     private int nominalTemperature;
     private int maxTemperture;
+    final static int BOOSTSTEP = 100;
 
     public HeatedComponents() {
 

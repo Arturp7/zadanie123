@@ -1,7 +1,9 @@
+
+
 public class Processor extends HeatedComponents {
 
-    static int BOOSTSTEP = 100;
-    int actualTemperature;
+
+
 
     public Processor(String name, String producer, String serialNumber, int clock, int nominalTemperature, int maxTemperture) {
         super(name, producer, serialNumber, clock, nominalTemperature, maxTemperture);
@@ -9,7 +11,7 @@ public class Processor extends HeatedComponents {
 
 
     @Override
-    public void boost(int BOOSTSTEP ) {
+    public void boost( ) {
        if(getNominalTemperature()<getMaxTemperture()) {
            setClock(getClock() + BOOSTSTEP);
            setNominalTemperature(getNominalTemperature() + 10);
@@ -17,6 +19,8 @@ public class Processor extends HeatedComponents {
 
        } else {
            System.out.println("Procesor overheated");
+           setNominalTemperature(getNominalTemperature() - 10);
+
        }
 
 
